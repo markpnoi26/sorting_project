@@ -21,8 +21,30 @@ export default class BarsContainer extends React.Component {
     }
 
     handleJumble = () => {
+
+        const jumble = (array) => {
+
+            let currentIndex = array.length, temporaryValue, randomIndex;
+            
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+            
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+            
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            
+            return array;
+
+        }
+
         this.setState({
-            values: [3,1, 2, 5, 10, 4, 9,7, 6, 8]
+            values: jumble(this.state.values.slice())
         })
     }
 
