@@ -7,7 +7,7 @@ export default class BarsContainer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            values: [3,1, 2, 5, 10, 4, 9,7, 6, 8],
+            values: [3,3.5,1,1.5, 2,2.5, 5,5.5, 10,10.5, 4,4.5, 9,9.5,7,7.5, 6,6.5, 8,8.5],
             maxValueInValues: 10,
             maxHeight: 600,
             maxWidth: 800
